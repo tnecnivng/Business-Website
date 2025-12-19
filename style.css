@@ -1,1 +1,281 @@
+:root {
+  --bg: #f4f5f6;
+  --text: #0f1011;
+  --muted: #5a5e62;
+  --accent: #e2e4e6;
+  --serif: 'Playfair Display', 'Georgia', serif;
+  --sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --max-width: 1240px;
+  --section-space: clamp(3rem, 6vw, 5.5rem);
+}
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  letter-spacing: 0.01em;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  padding: 1.8rem 0 0.9rem;
+}
+
+.nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.75rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.6rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-left {
+  justify-self: start;
+}
+
+.nav-right {
+  justify-self: end;
+}
+
+.utility {
+  gap: 1.25rem;
+  text-transform: none;
+  font-size: 0.88rem;
+}
+
+.nav-link {
+  position: relative;
+  padding-bottom: 0.3rem;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  opacity: 0.6;
+}
+
+.brand {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.75rem var(--section-space);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  padding: 1.25rem 0 var(--section-space);
+}
+
+.filter-pill {
+  background: #eceeef;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 0.55rem 1.4rem;
+  font-size: 0.87rem;
+  font-family: var(--sans);
+  letter-spacing: 0.02em;
+  color: var(--text);
+  cursor: pointer;
+  transition: opacity 150ms ease, border-color 150ms ease, background-color 150ms ease;
+}
+
+.filter-pill:hover,
+.filter-pill:focus-visible {
+  opacity: 0.8;
+  border-color: #d5d7da;
+  background: #e8eaeb;
+}
+
+.collection-header {
+  text-align: center;
+  padding-bottom: var(--section-space);
+}
+
+.collection-header h1 {
+  margin: 0 0 0.8rem;
+  font-family: var(--serif);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: clamp(1.35rem, 2.6vw, 1.8rem);
+}
+
+.collection-description {
+  margin: 0 auto;
+  max-width: 44rem;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+.collection {
+  padding-bottom: var(--section-space);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(2rem, 3vw, 3rem);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  position: relative;
+}
+
+.item-visual {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: linear-gradient(135deg, #f7f8f9 0%, #eef1f3 100%);
+  border-radius: 0.65rem;
+  transition: opacity 150ms ease, transform 150ms ease;
+}
+
+.item:hover .item-visual,
+.item:focus-within .item-visual {
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+
+.item-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.item-name {
+  font-size: 0.98rem;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+}
+
+.item-subline {
+  color: var(--muted);
+  font-size: 0.88rem;
+  letter-spacing: 0.01em;
+}
+
+.item-price {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.swatches {
+  display: flex;
+  gap: 0.35rem;
+  margin-top: 0.25rem;
+}
+
+.swatch {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 2px;
+  border: 1px solid #d4d6d8;
+}
+
+.swatch.muted {
+  background: #d1d4d7;
+}
+
+.swatch.dusk {
+  background: #c2c4c8;
+}
+
+.swatch.ink {
+  background: #2d3033;
+}
+
+.swatch.linen {
+  background: #e4e6e7;
+}
+
+.bookmark {
+  position: absolute;
+  top: 0.4rem;
+  right: 0;
+  background: none;
+  border: none;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #3a3c3f;
+  opacity: 0.55;
+  cursor: pointer;
+  padding: 0.35rem 0.15rem;
+}
+
+.bookmark:hover,
+.bookmark:focus-visible {
+  opacity: 0.85;
+}
+
+@media (max-width: 900px) {
+  .nav {
+    grid-template-columns: auto auto;
+    row-gap: 0.75rem;
+  }
+
+  .brand {
+    grid-column: 1 / 3;
+    justify-self: center;
+  }
+
+  .nav-left {
+    grid-column: 1 / 2;
+  }
+
+  .nav-right {
+    display: none;
+  }
+
+  .filters {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 540px) {
+  header {
+    padding: 1.1rem 0 0.35rem;
+  }
+
+  .nav {
+    padding: 0 1.15rem;
+  }
+
+  .page {
+    padding: 0 1.15rem var(--section-space);
+  }
+}

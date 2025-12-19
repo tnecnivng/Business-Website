@@ -1,8 +1,8 @@
 diff --git a/index.html b/index.html
-index 8b137891791fe96927ad78e64b0aad7bded08bdc..f6e9993866d32c0ac8b5df0b5606593c4f3a7d9e 100644
+index 8b137891791fe96927ad78e64b0aad7bded08bdc..c57d3995e72626500c3308f0b0a4c597bc598d96 100644
 --- a/index.html
 +++ b/index.html
-@@ -1 +1,119 @@
+@@ -1 +1,169 @@
 +<!DOCTYPE html>
 +<html lang="en">
 +<head>
@@ -17,31 +17,39 @@ index 8b137891791fe96927ad78e64b0aad7bded08bdc..f6e9993866d32c0ac8b5df0b5606593c
 +<body>
 +  <header>
 +    <nav class="nav" aria-label="Primary">
-+      <ul class="nav-list nav-left">
-+        <li><a href="#collection" class="nav-link">Lash Sets</a></li>
-+        <li><a href="#collection" class="nav-link">Brows</a></li>
-+        <li><a href="#collection" class="nav-link">Studio</a></li>
-+      </ul>
++      <div class="nav-left">
++        <ul class="nav-list">
++          <li><a href="#collection" class="nav-link">Sunglasses</a></li>
++          <li><a href="#collection" class="nav-link">Services</a></li>
++          <li><a href="#collection" class="nav-link">Studio</a></li>
++          <li><a href="#collection" class="nav-link">Journal</a></li>
++        </ul>
++      </div>
 +      <div class="brand" aria-label="Atelier brand">Atelier</div>
-+      <ul class="nav-list nav-right">
-+        <li><a href="#collection" class="nav-link">Journal</a></li>
-+        <li><a href="#collection" class="nav-link">Visit</a></li>
-+      </ul>
++      <div class="nav-right">
++        <ul class="nav-list utility">
++          <li><a href="#collection" class="nav-link">Search</a></li>
++          <li><a href="#collection" class="nav-link">Account</a></li>
++          <li><a href="#collection" class="nav-link">Bag</a></li>
++        </ul>
++      </div>
 +    </nav>
 +  </header>
  
 +  <main class="page">
 +    <section class="filters" aria-label="Static filters">
++      <button type="button" class="filter-pill" aria-pressed="false">View all</button>
 +      <button type="button" class="filter-pill" aria-pressed="false">Feathered</button>
 +      <button type="button" class="filter-pill" aria-pressed="false">Structured</button>
 +      <button type="button" class="filter-pill" aria-pressed="false">Signature</button>
++      <button type="button" class="filter-pill" aria-pressed="false">New</button>
 +      <button type="button" class="filter-pill" aria-pressed="false">Limited</button>
-+      <button type="button" class="filter-pill" aria-pressed="false">Studio Only</button>
++      <button type="button" class="filter-pill" aria-pressed="false">Studio only</button>
 +    </section>
 +
 +    <section class="collection-header" aria-labelledby="collection-title">
 +      <h1 id="collection-title">All Services</h1>
-+      <p class="collection-description">Curated lash and brow compositions designed for calm luxury, crafted to sit effortlessly within your day.</p>
++      <p class="collection-description">Explore an edited suite of lash and brow compositions that bring quiet luxury to everyday rituals.</p>
 +    </section>
 +
 +    <section class="collection" id="collection" aria-label="Collection grid">
@@ -51,6 +59,12 @@ index 8b137891791fe96927ad78e64b0aad7bded08bdc..f6e9993866d32c0ac8b5df0b5606593c
 +          <div class="item-meta">
 +            <div class="item-name">Feathered Volume</div>
 +            <div class="item-subline">Soft lash architecture</div>
++            <div class="item-price">$320</div>
++            <div class="swatches" aria-hidden="true">
++              <span class="swatch muted"></span>
++              <span class="swatch dusk"></span>
++              <span class="swatch ink"></span>
++            </div>
 +          </div>
 +          <button type="button" class="bookmark" aria-label="Save Feathered Volume">Save</button>
 +        </article>
@@ -60,6 +74,11 @@ index 8b137891791fe96927ad78e64b0aad7bded08bdc..f6e9993866d32c0ac8b5df0b5606593c
 +          <div class="item-meta">
 +            <div class="item-name">Midnight Silk</div>
 +            <div class="item-subline">Deep taper, muted sheen</div>
++            <div class="item-price">$340</div>
++            <div class="swatches" aria-hidden="true">
++              <span class="swatch muted"></span>
++              <span class="swatch linen"></span>
++            </div>
 +          </div>
 +          <button type="button" class="bookmark" aria-label="Save Midnight Silk">Save</button>
 +        </article>
@@ -69,6 +88,10 @@ index 8b137891791fe96927ad78e64b0aad7bded08bdc..f6e9993866d32c0ac8b5df0b5606593c
 +          <div class="item-meta">
 +            <div class="item-name">Contour Lift</div>
 +            <div class="item-subline">Elevated outer sweep</div>
++            <div class="item-price">$305</div>
++            <div class="swatches" aria-hidden="true">
++              <span class="swatch linen"></span>
++            </div>
 +          </div>
 +          <button type="button" class="bookmark" aria-label="Save Contour Lift">Save</button>
 +        </article>
@@ -78,6 +101,11 @@ index 8b137891791fe96927ad78e64b0aad7bded08bdc..f6e9993866d32c0ac8b5df0b5606593c
 +          <div class="item-meta">
 +            <div class="item-name">Veil Classic</div>
 +            <div class="item-subline">Balanced everyday set</div>
++            <div class="item-price">$285</div>
++            <div class="swatches" aria-hidden="true">
++              <span class="swatch muted"></span>
++              <span class="swatch ink"></span>
++            </div>
 +          </div>
 +          <button type="button" class="bookmark" aria-label="Save Veil Classic">Save</button>
 +        </article>
@@ -87,6 +115,12 @@ index 8b137891791fe96927ad78e64b0aad7bded08bdc..f6e9993866d32c0ac8b5df0b5606593c
 +          <div class="item-meta">
 +            <div class="item-name">Cerulean Edit</div>
 +            <div class="item-subline">Waterline clarity focus</div>
++            <div class="item-price">$360</div>
++            <div class="swatches" aria-hidden="true">
++              <span class="swatch muted"></span>
++              <span class="swatch linen"></span>
++              <span class="swatch ink"></span>
++            </div>
 +          </div>
 +          <button type="button" class="bookmark" aria-label="Save Cerulean Edit">Save</button>
 +        </article>
@@ -96,6 +130,11 @@ index 8b137891791fe96927ad78e64b0aad7bded08bdc..f6e9993866d32c0ac8b5df0b5606593c
 +          <div class="item-meta">
 +            <div class="item-name">Atelier Brow Sculpt</div>
 +            <div class="item-subline">Softly defined arches</div>
++            <div class="item-price">$245</div>
++            <div class="swatches" aria-hidden="true">
++              <span class="swatch muted"></span>
++              <span class="swatch dusk"></span>
++            </div>
 +          </div>
 +          <button type="button" class="bookmark" aria-label="Save Atelier Brow Sculpt">Save</button>
 +        </article>
@@ -105,6 +144,11 @@ index 8b137891791fe96927ad78e64b0aad7bded08bdc..f6e9993866d32c0ac8b5df0b5606593c
 +          <div class="item-meta">
 +            <div class="item-name">Glassline Lamination</div>
 +            <div class="item-subline">Groomed, lifted sheen</div>
++            <div class="item-price">$260</div>
++            <div class="swatches" aria-hidden="true">
++              <span class="swatch linen"></span>
++              <span class="swatch ink"></span>
++            </div>
 +          </div>
 +          <button type="button" class="bookmark" aria-label="Save Glassline Lamination">Save</button>
 +        </article>
@@ -114,6 +158,12 @@ index 8b137891791fe96927ad78e64b0aad7bded08bdc..f6e9993866d32c0ac8b5df0b5606593c
 +          <div class="item-meta">
 +            <div class="item-name">Studio Quiet</div>
 +            <div class="item-subline">Sessioned private set</div>
++            <div class="item-price">$420</div>
++            <div class="swatches" aria-hidden="true">
++              <span class="swatch muted"></span>
++              <span class="swatch dusk"></span>
++              <span class="swatch ink"></span>
++            </div>
 +          </div>
 +          <button type="button" class="bookmark" aria-label="Save Studio Quiet">Save</button>
 +        </article>

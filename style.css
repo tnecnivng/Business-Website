@@ -1,1 +1,124 @@
-
+diff --git a/index.html b/index.html
+index 8b137891791fe96927ad78e64b0aad7bded08bdc..f6e9993866d32c0ac8b5df0b5606593c4f3a7d9e 100644
+--- a/index.html
++++ b/index.html
+@@ -1 +1,119 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Atelier Collection</title>
++  <link rel="preconnect" href="https://fonts.googleapis.com">
++  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
++  <link rel="stylesheet" href="style.css">
++</head>
++<body>
++  <header>
++    <nav class="nav" aria-label="Primary">
++      <ul class="nav-list nav-left">
++        <li><a href="#collection" class="nav-link">Lash Sets</a></li>
++        <li><a href="#collection" class="nav-link">Brows</a></li>
++        <li><a href="#collection" class="nav-link">Studio</a></li>
++      </ul>
++      <div class="brand" aria-label="Atelier brand">Atelier</div>
++      <ul class="nav-list nav-right">
++        <li><a href="#collection" class="nav-link">Journal</a></li>
++        <li><a href="#collection" class="nav-link">Visit</a></li>
++      </ul>
++    </nav>
++  </header>
+ 
++  <main class="page">
++    <section class="filters" aria-label="Static filters">
++      <button type="button" class="filter-pill" aria-pressed="false">Feathered</button>
++      <button type="button" class="filter-pill" aria-pressed="false">Structured</button>
++      <button type="button" class="filter-pill" aria-pressed="false">Signature</button>
++      <button type="button" class="filter-pill" aria-pressed="false">Limited</button>
++      <button type="button" class="filter-pill" aria-pressed="false">Studio Only</button>
++    </section>
++
++    <section class="collection-header" aria-labelledby="collection-title">
++      <h1 id="collection-title">All Services</h1>
++      <p class="collection-description">Curated lash and brow compositions designed for calm luxury, crafted to sit effortlessly within your day.</p>
++    </section>
++
++    <section class="collection" id="collection" aria-label="Collection grid">
++      <div class="grid">
++        <article class="item">
++          <div class="item-visual" aria-hidden="true"></div>
++          <div class="item-meta">
++            <div class="item-name">Feathered Volume</div>
++            <div class="item-subline">Soft lash architecture</div>
++          </div>
++          <button type="button" class="bookmark" aria-label="Save Feathered Volume">Save</button>
++        </article>
++
++        <article class="item">
++          <div class="item-visual" aria-hidden="true"></div>
++          <div class="item-meta">
++            <div class="item-name">Midnight Silk</div>
++            <div class="item-subline">Deep taper, muted sheen</div>
++          </div>
++          <button type="button" class="bookmark" aria-label="Save Midnight Silk">Save</button>
++        </article>
++
++        <article class="item">
++          <div class="item-visual" aria-hidden="true"></div>
++          <div class="item-meta">
++            <div class="item-name">Contour Lift</div>
++            <div class="item-subline">Elevated outer sweep</div>
++          </div>
++          <button type="button" class="bookmark" aria-label="Save Contour Lift">Save</button>
++        </article>
++
++        <article class="item">
++          <div class="item-visual" aria-hidden="true"></div>
++          <div class="item-meta">
++            <div class="item-name">Veil Classic</div>
++            <div class="item-subline">Balanced everyday set</div>
++          </div>
++          <button type="button" class="bookmark" aria-label="Save Veil Classic">Save</button>
++        </article>
++
++        <article class="item">
++          <div class="item-visual" aria-hidden="true"></div>
++          <div class="item-meta">
++            <div class="item-name">Cerulean Edit</div>
++            <div class="item-subline">Waterline clarity focus</div>
++          </div>
++          <button type="button" class="bookmark" aria-label="Save Cerulean Edit">Save</button>
++        </article>
++
++        <article class="item">
++          <div class="item-visual" aria-hidden="true"></div>
++          <div class="item-meta">
++            <div class="item-name">Atelier Brow Sculpt</div>
++            <div class="item-subline">Softly defined arches</div>
++          </div>
++          <button type="button" class="bookmark" aria-label="Save Atelier Brow Sculpt">Save</button>
++        </article>
++
++        <article class="item">
++          <div class="item-visual" aria-hidden="true"></div>
++          <div class="item-meta">
++            <div class="item-name">Glassline Lamination</div>
++            <div class="item-subline">Groomed, lifted sheen</div>
++          </div>
++          <button type="button" class="bookmark" aria-label="Save Glassline Lamination">Save</button>
++        </article>
++
++        <article class="item">
++          <div class="item-visual" aria-hidden="true"></div>
++          <div class="item-meta">
++            <div class="item-name">Studio Quiet</div>
++            <div class="item-subline">Sessioned private set</div>
++          </div>
++          <button type="button" class="bookmark" aria-label="Save Studio Quiet">Save</button>
++        </article>
++      </div>
++    </section>
++  </main>
++</body>
++</html>
